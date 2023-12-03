@@ -1,0 +1,379 @@
+[gd_scene load_steps=9 format=3 uid="uid://qqcc43qxex4l"]
+
+[ext_resource type="Texture2D" uid="uid://bwaq6mlbv744a" path="res://Textures/Background.png" id="1_ijxj7"]
+[ext_resource type="Script" path="res://Scripts/Terminal.gd" id="2_cwkum"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s35u5"]
+bg_color = Color(0, 0, 0, 0.490196)
+corner_radius_top_left = 128
+corner_radius_top_right = 128
+corner_radius_bottom_right = 128
+corner_radius_bottom_left = 128
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8i6gh"]
+bg_color = Color(0.0823529, 0.576471, 0.996078, 0.490196)
+corner_radius_top_left = 128
+corner_radius_top_right = 128
+corner_radius_bottom_right = 128
+corner_radius_bottom_left = 128
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cubd8"]
+bg_color = Color(0.0823529, 0.576471, 0.996078, 0.490196)
+corner_radius_top_left = 128
+corner_radius_top_right = 128
+corner_radius_bottom_right = 128
+corner_radius_bottom_left = 128
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b8i07"]
+bg_color = Color(0.0823529, 0.576471, 0.996078, 0.490196)
+corner_radius_top_left = 128
+corner_radius_top_right = 128
+corner_radius_bottom_right = 128
+corner_radius_bottom_left = 128
+
+[sub_resource type="LabelSettings" id="LabelSettings_fuo31"]
+line_spacing = 0.0
+font_size = 68
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 0.294118)
+
+[sub_resource type="LabelSettings" id="LabelSettings_r6luy"]
+font_size = 44
+
+[node name="Program" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" type="TextureRect" parent="CanvasLayer"]
+modulate = Color(0.439216, 0.439216, 0.439216, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ijxj7")
+expand_mode = 1
+
+[node name="Keyboard" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -488.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ButtonBkt" type="Button" parent="CanvasLayer/Keyboard"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 62.0
+offset_top = 18.0
+offset_right = 232.0
+offset_bottom = 98.0
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s35u5")
+text = "("
+
+[node name="ButtonBkt2" type="Button" parent="CanvasLayer/Keyboard"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 252.0
+offset_top = 18.0
+offset_right = 422.0
+offset_bottom = 98.0
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s35u5")
+text = ")"
+
+[node name="Button7" type="Button" parent="CanvasLayer/Keyboard"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 22.0
+offset_top = 108.0
+offset_right = 102.0
+offset_bottom = 188.0
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s35u5")
+text = "7"
+
+[node name="Button8" type="Button" parent="CanvasLayer/Keyboard"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 112.0
+offset_top = 108.0
+offset_right = 192.0
+offset_bottom = 188.0
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s35u5")
+text = "8"
+
+[node name="Button9" type="Button" parent="CanvasLayer/Keyboard"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 202.0
+offset_top = 108.0
+offset_right = 282.0
+offset_bottom = 188.0
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s35u5")
+text = "9"
+
+[node name="ButtonMinus" type="Button" parent="CanvasLayer/Keyboard"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 292.0
+offset_top = 108.0
+offset_right = 372.0
+offset_bottom = 188.0
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_8i6gh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s35u5")
+text = "-"
+
+[node name="ButtonDivision" type="Button" parent="CanvasLayer/Keyboard"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 382.0
+offset_top = 108.0
+offset_right = 462.0
+offset_bottom = 188.0
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_8i6gh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s35u5")
+text = "/"
+
+[node name="Button4" type="Button" parent="CanvasLayer/Keyboard"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 22.0
+offset_top = 198.0
+offset_right = 102.0
+offset_bottom = 278.0
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s35u5")
+text = "4"
+
+[node name="Button5" type="Button" parent="CanvasLayer/Keyboard"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 112.0
+offset_top = 198.0
+offset_right = 192.0
+offset_bottom = 278.0
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s35u5")
+text = "5"
+
+[node name="Button6" type="Button" parent="CanvasLayer/Keyboard"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 202.0
+offset_top = 198.0
+offset_right = 282.0
+offset_bottom = 278.0
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s35u5")
+text = "6"
+
+[node name="ButtonPlus" type="Button" parent="CanvasLayer/Keyboard"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 292.0
+offset_top = 198.0
+offset_right = 372.0
+offset_bottom = 368.0
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_cubd8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s35u5")
+text = "+"
+
+[node name="ButtonMulti" type="Button" parent="CanvasLayer/Keyboard"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 382.0
+offset_top = 198.0
+offset_right = 462.0
+offset_bottom = 278.0
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_8i6gh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s35u5")
+text = "x"
+
+[node name="Button1" type="Button" parent="CanvasLayer/Keyboard"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 22.0
+offset_top = 288.0
+offset_right = 102.0
+offset_bottom = 368.0
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s35u5")
+text = "1"
+
+[node name="Button2" type="Button" parent="CanvasLayer/Keyboard"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 112.0
+offset_top = 288.0
+offset_right = 192.0
+offset_bottom = 368.0
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s35u5")
+text = "2"
+
+[node name="Button3" type="Button" parent="CanvasLayer/Keyboard"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 202.0
+offset_top = 288.0
+offset_right = 282.0
+offset_bottom = 368.0
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s35u5")
+text = "3"
+
+[node name="ButtonPercent" type="Button" parent="CanvasLayer/Keyboard"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 382.0
+offset_top = 288.0
+offset_right = 462.0
+offset_bottom = 368.0
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_8i6gh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s35u5")
+text = "%"
+
+[node name="ButtonDot" type="Button" parent="CanvasLayer/Keyboard"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 22.0
+offset_top = 378.0
+offset_right = 102.0
+offset_bottom = 458.0
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s35u5")
+text = "."
+
+[node name="Button0" type="Button" parent="CanvasLayer/Keyboard"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 112.0
+offset_top = 378.0
+offset_right = 192.0
+offset_bottom = 458.0
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s35u5")
+text = "0"
+
+[node name="ButtonC" type="Button" parent="CanvasLayer/Keyboard"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 202.0
+offset_top = 378.0
+offset_right = 282.0
+offset_bottom = 458.0
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s35u5")
+text = "C"
+
+[node name="ButtonEquals" type="Button" parent="CanvasLayer/Keyboard"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 292.0
+offset_top = 378.0
+offset_right = 462.0
+offset_bottom = 458.0
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_b8i07")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s35u5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s35u5")
+text = "="
+
+[node name="Answer" type="Label" parent="CanvasLayer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 19.0
+offset_top = 99.0
+offset_right = -19.0
+offset_bottom = 234.0
+grow_horizontal = 2
+text = "0"
+label_settings = SubResource("LabelSettings_fuo31")
+horizontal_alignment = 2
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="Example" type="Label" parent="CanvasLayer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 19.0
+offset_top = 228.0
+offset_right = -19.0
+offset_bottom = 368.0
+grow_horizontal = 2
+label_settings = SubResource("LabelSettings_r6luy")
+horizontal_alignment = 2
+vertical_alignment = 1
+autowrap_mode = 1
+clip_text = true
+
+[node name="Terminal" type="Node" parent="." node_paths=PackedStringArray("answer", "example")]
+script = ExtResource("2_cwkum")
+answer = NodePath("../CanvasLayer/Answer")
+example = NodePath("../CanvasLayer/Example")
+
+[connection signal="button_down" from="CanvasLayer/Keyboard/ButtonBkt" to="Terminal" method="enter" binds= ["("]]
+[connection signal="button_down" from="CanvasLayer/Keyboard/ButtonBkt2" to="Terminal" method="enter" binds= [")"]]
+[connection signal="button_down" from="CanvasLayer/Keyboard/Button7" to="Terminal" method="enter" binds= ["7"]]
+[connection signal="button_down" from="CanvasLayer/Keyboard/Button8" to="Terminal" method="enter" binds= ["8"]]
+[connection signal="button_down" from="CanvasLayer/Keyboard/Button9" to="Terminal" method="enter" binds= ["9"]]
+[connection signal="button_down" from="CanvasLayer/Keyboard/ButtonMinus" to="Terminal" method="enter" binds= ["-"]]
+[connection signal="button_down" from="CanvasLayer/Keyboard/ButtonDivision" to="Terminal" method="enter" binds= ["/"]]
+[connection signal="button_down" from="CanvasLayer/Keyboard/Button4" to="Terminal" method="enter" binds= ["4"]]
+[connection signal="button_down" from="CanvasLayer/Keyboard/Button5" to="Terminal" method="enter" binds= ["5"]]
+[connection signal="button_down" from="CanvasLayer/Keyboard/Button6" to="Terminal" method="enter" binds= ["6"]]
+[connection signal="button_down" from="CanvasLayer/Keyboard/ButtonPlus" to="Terminal" method="enter" binds= ["+"]]
+[connection signal="button_down" from="CanvasLayer/Keyboard/ButtonMulti" to="Terminal" method="enter" binds= ["*"]]
+[connection signal="button_down" from="CanvasLayer/Keyboard/Button1" to="Terminal" method="enter" binds= ["1"]]
+[connection signal="button_down" from="CanvasLayer/Keyboard/Button2" to="Terminal" method="enter" binds= ["2"]]
+[connection signal="button_down" from="CanvasLayer/Keyboard/Button3" to="Terminal" method="enter" binds= ["3"]]
+[connection signal="button_down" from="CanvasLayer/Keyboard/ButtonPercent" to="Terminal" method="enter" binds= ["%"]]
+[connection signal="button_down" from="CanvasLayer/Keyboard/ButtonDot" to="Terminal" method="enter" binds= ["."]]
+[connection signal="button_down" from="CanvasLayer/Keyboard/Button0" to="Terminal" method="enter" binds= ["0"]]
+[connection signal="button_down" from="CanvasLayer/Keyboard/ButtonC" to="Terminal" method="clear"]
+[connection signal="button_down" from="CanvasLayer/Keyboard/ButtonEquals" to="Terminal" method="calculation"]
