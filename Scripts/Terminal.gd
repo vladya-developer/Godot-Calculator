@@ -13,6 +13,12 @@ func enter(symbol):
 	formula += symbol
 	example.text += symbol
 
+func delete():
+	if formula.length() <= 0:
+		return
+	formula = formula.left(formula.length() - 1)
+	example.text = formula
+
 func clear() -> void:
 	formula = ""
 	example.text = ""
@@ -20,7 +26,7 @@ func clear() -> void:
 	cleared = false
 
 func calculation() -> void:
-	cleared = true
+	#cleared = true
 	var error = expression.parse(formula)
 	if error != OK:
 		answer.text = expression.get_error_text()
