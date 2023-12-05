@@ -66,11 +66,16 @@ grow_vertical = 0
 
 [node name="ButtonFormuls" type="Button" parent="CanvasLayer/Keyboard1"]
 custom_minimum_size = Vector2(80, 80)
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_left = 67.0
 offset_top = 18.0
-offset_right = 147.0
-offset_bottom = 98.0
+offset_right = -333.0
+offset_bottom = -390.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxFlat_s35u5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_s35u5")
@@ -114,7 +119,7 @@ theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxFlat_s35u5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_s35u5")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_s35u5")
-text = "🠔"
+text = "<"
 
 [node name="Button7" type="Button" parent="CanvasLayer/Keyboard1"]
 custom_minimum_size = Vector2(80, 80)
@@ -411,7 +416,7 @@ theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxFlat_s35u5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_s35u5")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_s35u5")
-text = "🠔"
+text = "<"
 
 [node name="ButtonPow" type="Button" parent="CanvasLayer/Keyboard2"]
 custom_minimum_size = Vector2(80, 80)
